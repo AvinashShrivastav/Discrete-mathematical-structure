@@ -17,22 +17,43 @@ class RELATION():
                 row.append(0)
             matrix.append(row)
         for i in relation:
-            pos1 = a.index(i[0])
-            pos2 = a.index(i[1])
-            matrix[pos1][pos2] = 1 
+            row = a.index(i[0])
+            col = a.index(i[1])
+            matrix[row][col] = 1 
         return matrix
 
     
     
-    def isSymmetric(self):
+    def isReflexive(self):
         for i in range(len(self.adjMat)):
-            if self.adjMat[i][i] != 1:
-                return False
+            for j in range(len(self.adjMat)):
+                if i == j and self.adjMat[i][j] != 1:
+                    return False
         return True
     
+    def isSymmetric(self):
+        for i in range(len(self.adjMat)):
+            for j in range(len(self.adjMat)):
+                if self.adjMat[i][j] == 1 and self.adjMat[j][i] != 1:
+                    return False
+        return True
+    
+    #This function is just for demo purpose. It has very high time complexity hence it is needed to be changed
+    def isTransitive(self):
+        for i in range(len(rel.adjMat)):
+            for j in range(len(rel.adjMat)):
+                for k in range(len(rel.adjMat)):
+                    if rel.adjMat[i][j] == 1 and rel.adjMat[j][k] == 1 :
+                        if rel.adjMat[i][k] != 1:
+                            return False
+        return True
 
-rel = RELATION([[1,2],[3,2],[3,1]])
+    
+
+rel = RELATION([[1,1],[2,2],[3,3],[2,1],[1,2],[2,3]])
+print(rel.isReflexive())
 print(rel.isSymmetric())
+print(rel.isTransitive())
                 
 
 
