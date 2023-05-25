@@ -9,7 +9,8 @@ for i in pm(arr):
     count += 1
 print(count)
 
-#Permutations without repetition
+
+#Permutations without repetition-------------
 
 
 # per_with_r = [(x,y,z,p) for x in arr for y in arr for z in arr for p in arr]
