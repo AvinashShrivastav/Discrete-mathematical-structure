@@ -47,6 +47,11 @@ class RELATION():
                         if rel.adjMat[i][k] != 1:
                             return False
         return True
+    
+    def isEquivalence(self):
+        if self.isReflexive() and self.isSymmetric() and self.isTransitive():
+            return True
+        return False
 
     
 
@@ -54,6 +59,7 @@ rel = RELATION([[1,1],[2,2],[3,3],[2,1],[1,2],[2,3]])
 print(rel.isReflexive())
 print(rel.isSymmetric())
 print(rel.isTransitive())
+print(rel.isEquivalence())
                 
 
 
