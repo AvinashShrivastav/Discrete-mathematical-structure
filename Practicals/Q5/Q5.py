@@ -1,4 +1,7 @@
 #Q5
+# Write a Program to evaluate a polynomial function. (For example store f(x) = 4n2 + 2n +
+# 9 in an array and for a given value of n, say n = 5, compute the value of f(n)).
+
 def evaluate_polynomial(coefficients, x):
     result = 0
     power = len(coefficients) - 1

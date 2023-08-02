@@ -1,3 +1,6 @@
+# Write a Program to check if a given graph is a complete graph. Represent the graph using
+# the Adjacency List representation.
+
 def is_complete_graph(adjacency_list):
     num_vertices = len(adjacency_list)
     

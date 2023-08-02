@@ -1,3 +1,9 @@
+# Q2
+# Create a class RELATION, use Matrix notation to represent a relation. Include member
+# functions to check if the relation is Reflexive, Symmetric, Anti-symmetric, Transitive.
+# Using these functions check whether the given relation is: Equivalence or Partial Order
+# relation or None
+
 a = [1,2,3]
 rel = [[1,1],[2,2],[3,3]]
 

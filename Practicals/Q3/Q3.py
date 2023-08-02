@@ -1,3 +1,6 @@
+# Write a Program that generates all the permutations of a given set of digits, with or
+# without repetition.
+
 from itertools import permutations, combinations_with_replacement
 
 arr = [1, 2, 3, 4]
